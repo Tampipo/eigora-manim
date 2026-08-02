@@ -1,0 +1,6 @@
+manim>=0.19
+
+# Reuse the platform's actual solvers so animations plot real physics
+# instead of re-deriving formulas by hand inside Manim scenes.
+physense-utils @ git+https://github.com/Tampipo/physense-utils
+physense-qm @ git+https://github.com/Tampipo/physense-qm

@@ -1,0 +1,15 @@
+# Manim's render cache — huge and fully reproducible from scenes/, never commit it.
+media/
+
+# Rendered exports. The finished, compressed video is committed to
+# physense-web/public/videos/ (where it's actually served) rather than here,
+# so this repo stays source-only and clone-able without Git LFS.
+output/*.mp4
+output/*.mov
+output/*.webm
+output/*.gif
+output/*.png
+
+__pycache__/
+*.pyc
+.venv/
