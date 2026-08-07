@@ -1,4 +1,4 @@
-# Copyright (C) 2026 Tanguy Marsault - PhySense
+# Copyright (C) 2026 Tanguy Marsault - Eigora
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 """The Bloch sphere: every pure spin-1/2 state as a direction in space.

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Copyright (C) 2026 Tanguy Marsault - PhySense
+# Copyright (C) 2026 Tanguy Marsault - Eigora
 # SPDX-License-Identifier: AGPL-3.0-or-later
 #
 # Render a Manim scene and produce a web-ready, compressed MP4 in output/.
@@ -34,4 +34,4 @@ OUT="output/${SCENE_CLASS}.mp4"
 ffmpeg -y -i "$RAW" -c:v libx264 -crf "$CRF" -preset slow -movflags +faststart "$OUT"
 
 echo "Web-ready file: $OUT"
-echo "Next: copy it into physense-web/public/videos/ and embed with <Video src=\"/videos/${SCENE_CLASS}.mp4\" />"
+echo "Next: copy it into eigora-web/public/videos/ and embed with <Video src=\"/videos/${SCENE_CLASS}.mp4\" />"

@@ -1,10 +1,10 @@
-# physense-manim
+# eigora-manim
 
-Manim scenes for [Physense](https://physense.tampipo.fr) explainer videos (e.g. the scanning tunneling microscope walkthrough).
+Manim scenes for [Eigora](https://eigora.tampipo.fr) explainer videos (e.g. the scanning tunneling microscope walkthrough).
 
-This is a rendering studio, not a deployed service: only scene sources live here. Rendered videos land in `output/` (gitignored) and the finished, compressed file is copied into `physense-web/public/videos/`, which is where it's actually served from — see [Shipping a video](#shipping-a-video-to-the-website).
+This is a rendering studio, not a deployed service: only scene sources live here. Rendered videos land in `output/` (gitignored) and the finished, compressed file is copied into `eigora-web/public/videos/`, which is where it's actually served from — see [Shipping a video](#shipping-a-video-to-the-website).
 
-Where it makes sense, scenes import [`physense-qm`](https://github.com/Tampipo/physense-qm) directly and animate the real solved wavefunctions instead of re-deriving the physics by hand in Manim.
+Where it makes sense, scenes import [`eigora`](https://github.com/Tampipo/eigora) directly and animate the real solved wavefunctions instead of re-deriving the physics by hand in Manim.
 
 ---
 
@@ -35,14 +35,14 @@ This runs `manim render`, then re-encodes the result with `ffmpeg` (`libx264`, `
 
 Once a render in `output/` is final:
 
-1. Copy the file into `../physense-web/public/videos/`.
+1. Copy the file into `../eigora-web/public/videos/`.
 2. Embed it in the relevant MDX article:
 
    ```mdx
    <Video src="/videos/STMSurfaceZoom.mp4" caption="…" />
    ```
 
-`physense-web` commits its own copy as a normal static asset, so the site doesn't depend on this repo at build or deploy time.
+`eigora-web` commits its own copy as a normal static asset, so the site doesn't depend on this repo at build or deploy time.
 
 ---
 
@@ -50,6 +50,6 @@ Once a render in `output/` is final:
 
 ```
 scenes/     Manim Scene subclasses, one file per topic
-output/     Rendered exports (gitignored) — copied to physense-web when final
+output/     Rendered exports (gitignored) — copied to eigora-web when final
 scripts/    render.sh — render + compress in one step
 ```
