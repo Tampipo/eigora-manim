@@ -1,5 +1,6 @@
 manim>=0.19
 
-# Reuse the platform's actual solvers so animations plot real physics
-# instead of re-deriving formulas by hand inside Manim scenes.
-eigora @ git+https://github.com/Tampipo/eigora
+# Add `eigora @ git+https://github.com/Tampipo/eigora` when a scene actually
+# imports the solvers, so animations plot real physics instead of re-deriving
+# formulas by hand. No scene does yet, and declaring it unused costs every
+# fresh setup a numpy/scipy build for nothing.
