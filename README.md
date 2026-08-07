@@ -1,3 +1,10 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/logo-dark.svg">
+    <img alt="Eigora" src="assets/logo-light.svg" width="240">
+  </picture>
+</p>
+
 # eigora-manim
 
 Manim scenes for [Eigora](https://eigora.tampipo.fr) explainer videos (e.g. the scanning tunneling microscope walkthrough).
