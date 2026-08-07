@@ -4,7 +4,7 @@ Manim scenes for [Eigora](https://eigora.tampipo.fr) explainer videos (e.g. the 
 
 This is a rendering studio, not a deployed service: only scene sources live here. Rendered videos land in `output/` (gitignored) and the finished, compressed file is copied into `eigora-web/public/videos/`, which is where it's actually served from — see [Shipping a video](#shipping-a-video-to-the-website).
 
-Where it makes sense, scenes import [`eigora`](https://github.com/Tampipo/eigora) directly and animate the real solved wavefunctions instead of re-deriving the physics by hand in Manim.
+Scenes currently derive their own physics inline. Where it makes sense they should instead import [`eigora`](https://github.com/Tampipo/eigora) and animate the real solved wavefunctions — add it to `requirements.txt` when the first scene does.
 
 ---
 
